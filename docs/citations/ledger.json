@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.nature.com/articles/srep02510",
+      "title": "Ebina et al. 2013, Sci Rep: Harnessing the CRISPR/Cas9 system to disrupt latent HIV-1 provirus",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 2,
+      "url": "https://www.nature.com/articles/ncomms7413",
+      "title": "Nat Commun 2015 (Liao?): Use of the CRISPR/Cas9 system as an intracellular defense against HIV-1 infection in human cells",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 3,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4882869",
+      "title": "Wang et al. 2016, Retrovirology: CRISPR/Cas9: a double-edged sword when used to combat HIV infection",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 4,
+      "url": "https://www.nature.com/articles/s41467-019-10366-y",
+      "title": "Dash et al. 2019, Nat Commun: Sequential LASER ART and CRISPR treatments eliminate HIV-1 in a subset of infected humanized mice",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 5,
+      "url": "https://www.cell.com/molecular-therapy-family/molecular-therapy/fulltext/S1525-0016(17)30170-3",
+      "title": "Yin et al. 2017, Mol Ther: In Vivo Excision of HIV-1 Provirus by saCas9 and Multiplex Single-Guide RNAs in Animal Models",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 6,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1405186111",
+      "title": "Hu et al. 2014, PNAS: RNA-directed gene editing specifically eradicates latent and prevents new HIV-1 infection",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 7,
+      "url": "https://journals.asm.org/doi/10.1128/jvi.01358-21",
+      "title": "J Virol 2021: CRISPR/Cas9 Ablation of Integrated HIV-1 Accumulates Proviral DNA Circles with Reforming LTRs (T5)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 8,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785",
+      "title": "CRISPR-Cas13a Inhibits HIV-1 Infection",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 9,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5417847",
+      "title": "Yin et al. 2017, Mol Ther: In Vivo Excision of HIV-1 Provirus by saCas9 and Multiplex Single-Guide RNAs in Animal Models",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 10,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7452136",
+      "title": "Safe CRISPR-Cas9 Inhibition of HIV-1 with High Specificity and Reduced Off-Target Effects (J Virol 2020)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 11,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6553478",
+      "title": "Prediction of HIV-1 Subtype-Specific Off-Target Effects (J Virol 2019)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 12,
+      "url": "https://gwern.net/doc/genetics/editing/2017-yin.pdf",
+      "title": "Yin et al. 2017 Mol Ther (PDF mirror): In vivo excision of HIV-1 provirus by saCas9 multiplex gRNAs",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 13,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8577360",
+      "title": "J Virol 2021: CRISPR/Cas9 Ablation of Integrated HIV-1 Accumulates Proviral DNA Circles with Reforming LTRs (PMC)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 14,
+      "url": "https://www.hiv.lanl.gov/content/sequence/HIV/REVIEWS/HXB2.html",
+      "title": "LANL HIV Database: Numbering Positions in HIV Relative to HXB2CG",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 15,
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5014606",
+      "title": "Defective proviruses rapidly accumulate during acute HIV-1 infection (PMC5014606)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 16,
+      "url": "https://www.biorxiv.org/content/10.1101/2021.07.21.453273v1.full.pdf",
+      "title": "Kulkarni et al. bioRxiv: Efficient inhibition of HIV using CRISPR/Cas13d nuclease system",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 17,
+      "url": "https://www.globenewswire.com/news-release/2022/09/15/2516733/0/en/excision-biotherapeutics-doses-first-participant-in-ebt-101-phase-1-2-trial-evaluating-ebt-101-as-a-potential-cure-for-hiv.html",
+      "title": "Excision BioTherapeutics press release Sept 2022: First participant dosed in EBT-101 Phase 1/2 trial",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 18,
+      "url": "https://www.biospace.com/excision-biotherapeutics-presents-positive-interim-clinical-data-from-ongoing-phase-1-2-trial-of-ebt-101-for-the-treatment-of-hiv-at-esgct-30th-annual-congress",
+      "title": "Excision BioTherapeutics Oct 2023: Positive interim clinical data from EBT-101 Phase 1/2 trial (ESGCT congress)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 19,
+      "url": "https://www.spotlightnsp.co.za/wp-content/uploads/2024/11/crispr-clinical-trial-with-ebt-101-for-hiv-using-excision-therapeutics.pdf",
+      "title": "Spotlight (Nov 2024): CRISPR clinical trial with EBT-101 for HIV using Excision Therapeutics",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 20,
+      "url": "https://www.beyondpositive.org/2024/08/06/hiv-viral-rebounds-following-crispr-gene-therapy",
+      "title": "Beyond Positive (Aug 2024): HIV rebounds following CRISPR gene therapy",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 21,
+      "url": "https://www.eatg.org/hiv-news/crispr-hiv-gene-therapy-disappoints-in-early-study",
+      "title": "EATG news: CRISPR HIV gene therapy disappoints in early study",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 22,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12337938",
+      "title": "Review: CRISPR/Cas9 for achieving postintervention HIV control",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 23,
+      "url": "https://www.fiercebiotech.com/special-reports/2025-biotech-graveyard",
+      "title": "Fierce Biotech: The 2025 Biotech Graveyard",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 24,
+      "url": "https://link.springer.com/article/10.1007/s40265-026-02311-3",
+      "title": "Drugs review (2026): Advances in Immune-Based Approaches for the Cure of HIV",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 25,
+      "url": "https://minerva-access.unimelb.edu.au/server/api/core/bitstreams/ff44ea1c-f320-4d93-9f4f-fc4024e720ce/content",
+      "title": "Review PDF: CRISPR/Cas9 for achieving postintervention HIV control",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 26,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13257677",
+      "title": "Identifying Conserved Regions in HIV-1 Proteins by Entropy (2025)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 27,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7434968",
+      "title": "Frontiers review 2020: Designing Safer CRISPR/Cas9 Therapeutics for HIV",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 28,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4941621",
+      "title": "Host Double Strand Break Repair Generates HIV-1 Strains Resistant to CRISPR/Cas9",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 29,
+      "url": "https://www.medscape.com/viewarticle/first-human-trial-crispr-gene-therapy-hiv-2024a1000dx5",
+      "title": "Medscape 2024: First-in-Human Trial of CRISPR Gene Therapy for HIV (EBT-101)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 30,
+      "url": "https://link.springer.com/article/10.1007/s11904-025-00769-6",
+      "title": "Curr HIV/AIDS Rep 2025: CRISPR Applications in HIV Management",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 31,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12385312",
+      "title": "Genes 2025: CRISPR/Cas13-Based Anti-RNA Viral Approaches",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 32,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4786927",
+      "title": "Wang G et al. 2016 Mol Ther: CRISPR-Cas9 Can Inhibit HIV-1 Replication but NHEJ Repair Facilitates Virus Escape",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 33,
+      "url": "https://www.mdpi.com/2073-4425/16/8/875",
+      "title": "Genes 2025: CRISPR/Cas13-Based Anti-RNA Viral Approaches",
+      "accessed": "2026-10-22"
+    }
+  ]
+}

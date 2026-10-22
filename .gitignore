@@ -1,0 +1,10 @@
+# Large data files stay out of git
+data/human/
+data/*.cgb
+data/*.fa
+docs/citations/pages/
+# Build artifacts
+src/crispr_scan
+__pycache__/
+*.pyc
+*.npz
