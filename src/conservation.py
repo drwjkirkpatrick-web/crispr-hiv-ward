@@ -45,13 +45,12 @@ def strain_maps(hxb2, strains):
         sarr = code_seq(sseq)
         aln = aligner.align(hxb2, sseq)[0]
         m = np.full(len(hxb2), 4, dtype=np.uint8)
-        for (s1a, s1b), (s2a, s2b) in aln.aligned:
-            n = s1b - s1a
-            m[s1a:s1b] = sarr[s2a:s2b]
-            if s2b - s2a != n:
-                # paired blocks are equal-length by construction; guard anyway
-                n = min(s1b - s1a, s2b - s2a)
-                m[s1a:s1a + n] = sarr[s2a:s2a + n]
+        # aligned has shape (2, n_blocks, 2): [seq0 blocks][seq1 blocks]
+        blocks0 = np.asarray(aln.aligned[0]).tolist()
+        blocks1 = np.asarray(aln.aligned[1]).tolist()
+        for (s1a, s1b), (s2a, s2b) in zip(blocks0, blocks1):
+            n = min(s1b - s1a, s2b - s2a)
+            m[s1a:s1a + n] = sarr[s2a:s2a + n]
         maps[name] = m
         pid = float((m == code_seq(hxb2)).mean())
         print(f"  {name}: aligned, {pid:.3%} per-position identity to HXB2")
