@@ -5,25 +5,69 @@
       "id": 1,
       "url": "https://www.nature.com/articles/srep02510",
       "title": "Ebina et al. 2013, Sci Rep: Harnessing the CRISPR/Cas9 system to disrupt latent HIV-1 provirus",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "f oligonucleotides targeting 5 and 6 are listed as follows: HE388 (TTTCTTGGCTTTATATATCTTGTGGAAAGGACGAAACACCGttagaccagatctgagcct) and HE389 (GACTAGCCTTATTTTAACTTGCTATTTCTAGCTCTAAAACaggctcagatctggtctaaC); and HE384 (TTTCTTGGCTTTATATATCTTGTGGAAAGGACGAAACACCGctacaagggactttccgct) and HE385 (GACTAGCCTTATTTTAACTTGCTATTTCTAGCTCTAAAACagcggaaagtcccttgtagC), respectively.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "two gRNA-expressing plasmids were generated for targets 5 and 6 (T5 and T6), located in the TAR sequence of the R region and NF-κB binding sequence in the U3 region, respectively",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 2,
       "url": "https://www.nature.com/articles/ncomms7413",
       "title": "Nat Commun 2015 (Liao?): Use of the CRISPR/Cas9 system as an intracellular defense against HIV-1 infection in human cells",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Target gRNAs were designed against the enhanced green fluorescent protein (EGFP) coding region as well as the non-coding long terminal repeat (LTR) of an EGFP reporter lentivirus",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 3,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4882869",
       "title": "Wang et al. 2016, Retrovirology: CRISPR/Cas9: a double-edged sword when used to combat HIV infection",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Rapid escape was observed when non-conserved HIV-1 sequences were attacked, but it did take longer for HIV-1 to escape from Cas9/sgRNAs that targeted the more conserved viral DNA sequences \\[ [12](https://pmc.ncbi.nlm.nih.gov/articles/PMC4882869/#CR12)\\].",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "The majority of the resistance mutations appeared to cluster at the site at which Cas9 was designed to cleave the viral DNA, even though the sgRNA binding site is much bigger.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Another striking feature was the frequent occurrence of insertions and deletions (indels), at least for the less conserved viral target sequences.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 4,
       "url": "https://www.nature.com/articles/s41467-019-10366-y",
       "title": "Dash et al. 2019, Nat Commun: Sequential LASER ART and CRISPR treatments eliminate HIV-1 in a subset of infected humanized mice",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "HIV-1 subgenomic DNA fragments, spanning the long terminal repeats and the Gag gene, are excised in vivo, resulting in elimination of integrated proviral DNA; virus is not detected in blood, lymphoid tissue, bone marrow and brain by nested and digital-droplet PCR as well as RNAscope tests.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "No CRISPR-Cas9 mediated off-target effects are detected.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Excision efficiency was estimated to be 80% in both 5′-LTR-Gag and Gag to 3’-LTR in mouse M4349.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 5,
@@ -35,7 +79,17 @@
       "id": 6,
       "url": "https://www.pnas.org/doi/10.1073/pnas.1405186111",
       "title": "Hu et al. 2014, PNAS: RNA-directed gene editing specifically eradicates latent and prevents new HIV-1 infection",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "We identified highly specific targets within the HIV-1 LTR U3 region that were efficiently edited by Cas9/gRNA, inactivating viral gene expression and replication in latently infected microglial, promonocytic, and T cells.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "genotoxicity nor off-target editing to the host cells, and completely excised a 9,709-bp fragment of integrated proviral DNA that spanned from its 5′ to 3′ LTRs.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 7,
@@ -47,7 +101,17 @@
       "id": 8,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785",
       "title": "CRISPR-Cas13a Inhibits HIV-1 Infection",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "he results of flow cytometry showed that YFP expression was reduced by 65%–80% in cells expressing HIV-1-targeting crRNA ( [Figures 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785/#fig2) A and 2B), which correlated with the decrease in YFP RNA that was expressed from HIV-1 DNA ( [Figure 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785/#fig2) C).",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "We therefore designed crRNAs that target HIV-1 long terminal repeat (LTR), _gag_, _tat_, and _rev_ regions ( [Figure 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785/#fig1) A; [Table S1](https://pmc.ncbi.nlm.nih.gov/articles/PMC7321785/#mmc1)).",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 9,
@@ -59,25 +123,93 @@
       "id": 10,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7452136",
       "title": "Safe CRISPR-Cas9 Inhibition of HIV-1 with High Specificity and Reduced Off-Target Effects (J Virol 2020)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "eq) showed that the gRNAs targeting NF-κB binding sites had no detectable CRISPR-induced off-target edits in HeLa cells.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 11,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6553478",
       "title": "Prediction of HIV-1 Subtype-Specific Off-Target Effects (J Virol 2019)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "NAs with predicted off-target cleavage was calculated to be 149 of the 4,114 viable gRNAs that were created, which corresponds to 3.60% of the tested gRNAs.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Of the 326 off-target effects, only 14 (4.29%) of them were exonic",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "gRNA templates were designed from every possible 20-mer from a collection of patient HIV-1 5′ LTR sequences.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "sidered viable for a CRISPR-Cas9 treatment, this means that 96.40% of the viable gRNAs are predicted to generate no off-target effects",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 12,
       "url": "https://gwern.net/doc/genetics/editing/2017-yin.pdf",
       "title": "Yin et al. 2017 Mol Ther (PDF mirror): In vivo excision of HIV-1 provirus by saCas9 multiplex gRNAs",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "-- | --- | --- | | sgRNA-Targeting Oligonucleotides | | | | LTR-1 | T708: sense | caccGCAGAACTACACACCAGGGCC | | LTR-1 | T709: antisense | aaacGGCCCTGGTGTGTAGTTCTGC | | LTR-2 | T710: sense | caccGTTACACCCTATGAGCCAGCA | | LTR-2 | T711: antisense | aaacTGCTGGCTCATAGGGTGTAAC | | LTR-3 | T712: sense | caccGTGTGGCCTGGGCGGGACTG | | LTR-3 | T713: antisense | aaacCAGTCCCGCCCAGGCCACAC | | GagB | T714: sense | caccGCCTTCCCACAAGGGAAGGCCA | | GagB | T715: antisense | aaacTGGCCTTCCCTTGTGGGAAGGC | | GagC | T758: sense",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "d provide a rationale for quadruplex sgRNAs (see below), we selected a combination of sgRNAs of LTR-1 and GagD for TA cloning and Sanger sequencing.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "The smaller size of saCas9 (3.159 kb) allows a single AAV vector to harbor two sgRNA-expressing cassettes and an saCas9-expressing cassette for efficient AAV packaging and gene delivery.<sup>22</sup> Transfection of the duplex sgRNAs/saCas9 vector induced a further reduction of luciferase reporter activity as compared with the co-transfection of two separate single sgRNA/saCas9 vectors (Figure 2A).",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "eatures for optimized efficiency, we selected a cocktail of LTR-1, LTR-3, GagD, and PolB sgRNAs and cloned their expression cassettes into an all-in-one saCas9 AAV vector using a novel interchangeable infu- sion cloning strategy.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "The quadruplex sgRNAs/saCas9 vector outperformed the duplex vector in excising the integrated HIV-1 genome in cultured neural stem/progenitor cells from HIV-1 Tg26 transgenic mice.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "up> The duplex sgRNAs/saCas9-expressing cassette (4.969 kb) almost reaches the packaging limit of AAV viruses (~5.0–5.2 kb).<sup>23</sup> However, genome sizes ranging from 5.2 to 8.9 kb have been reported for efficient --- Please cite this article in press as: Yin et al., In Vivo Excision of HIV-1 Provirus by saCas9 and Multiplex Single-Guide RNAs in Animal Models, Molecular Therapy (2017), http://dx.doi.org/10.1016/j.ymthe.2017.03.012 AAV packaging and gene delivery both in vitro and in vivo.<sup>24–26</sup> Therefor",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 13,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8577360",
       "title": "J Virol 2021: CRISPR/Cas9 Ablation of Integrated HIV-1 Accumulates Proviral DNA Circles with Reforming LTRs (PMC)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "The T5 gRNA targets a highly conserved region between the TATA box and the NF-κB binding site in LTRs.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "geting CRISPR/Cas9, we show that the excised HIV-1 provirus persists for a few weeks and may rearrange in circular molecules.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "ork highlights that, to achieve this goal, the LTRs must be cleaved in several pieces to avoid residual activity and minimize the risk of reintegration in the context of genomic instability, possibly caused by the off-target activity of Cas9.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "The selected gRNA, named T5 ( _TTAGACCAGATCTGAGCCT_), targets the LTR R region and is 99 to 100% conserved in all HIV clinical isolate sequences available in the Los Alamos database at the end of 2015 (data not shown).",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 14,
@@ -89,7 +221,21 @@
       "id": 15,
       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5014606",
       "title": "Defective proviruses rapidly accumulate during acute HIV-1 infection (PMC5014606)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "cumulate rapidly within the first few weeks of infection to make up over 93% of all proviruses, regardless of how early ART is initiated.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "The most common defects were internal deletions (80%), which varied in size (15 bp to ~8 kb) and in location in the genome.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Some proviruses had 3′ deletions affecting the _env_, _tat_, _rev_ and _nef_ genes.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 16,
@@ -101,31 +247,65 @@
       "id": 17,
       "url": "https://www.globenewswire.com/news-release/2022/09/15/2516733/0/en/excision-biotherapeutics-doses-first-participant-in-ebt-101-phase-1-2-trial-evaluating-ebt-101-as-a-potential-cure-for-hiv.html",
       "title": "Excision BioTherapeutics press release Sept 2022: First participant dosed in EBT-101 Phase 1/2 trial",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "dual guide RNAs, enabling a multiplex editing approach that simultaneously targets three distinct sites within the HIV genome.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 18,
       "url": "https://www.biospace.com/excision-biotherapeutics-presents-positive-interim-clinical-data-from-ongoing-phase-1-2-trial-of-ebt-101-for-the-treatment-of-hiv-at-esgct-30th-annual-congress",
       "title": "Excision BioTherapeutics Oct 2023: Positive interim clinical data from EBT-101 Phase 1/2 trial (ESGCT congress)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "- Excision reported positive safety and biodistribution data to 48 weeks in the first-in-human Phase 1/2 clinical evaluation of EBT-101 - No serious adverse events or dose-limiting toxicities were seen in any trial participant - EBT-101 was detected in blood in all participants SAN FRANCISCO, Oct.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 19,
       "url": "https://www.spotlightnsp.co.za/wp-content/uploads/2024/11/crispr-clinical-trial-with-ebt-101-for-hiv-using-excision-therapeutics.pdf",
       "title": "Spotlight (Nov 2024): CRISPR clinical trial with EBT-101 for HIV using Excision Therapeutics",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "rapy approach to excise the latent HIV proviral genome with AAV9 multiplex CRISPR-SaCas9<sup>1</sup> --- ## Excision’s Multiplexed Gene Editing Approach is Designed to ## Maximize Viral Inactivation and Prevent Escape ## Standard Gene Editing Approach Single site cut leads to viral escape Single gRNA Small Insertion or Deletion NH EJ **Viral Escape** ## Excision’s CRISPR Approach Excising large sections of viral DNA eliminates viral escape.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Delivered by AAV9 Gene Therapy SaCas9 Endonuclease ITR ITR GagD LTR-1 gRNA gRNA Capsid EBT-101 DNA **AAV9** • AAV9 is an approved non-pathogenic virus used to make gene therapy products • Delivery: AAV9 will go to body organs and the necessary cells that harbor the latent HIV provirus (e.g.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 20,
       "url": "https://www.beyondpositive.org/2024/08/06/hiv-viral-rebounds-following-crispr-gene-therapy",
       "title": "Beyond Positive (Aug 2024): HIV rebounds following CRISPR gene therapy",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "However, it fell short in preventing viral rebound among the first four participants who initiated a pause in their antiretroviral treatment, as reported at the **International AIDS Conference (AIDS 2024)** in Munich, Germany.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 21,
       "url": "https://www.eatg.org/hiv-news/crispr-hiv-gene-therapy-disappoints-in-early-study",
       "title": "EATG news: CRISPR HIV gene therapy disappoints in early study",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": ", was safe and well tolerated in a Phase I/II study, but it did not prevent viral rebound in the first three participants who stopped antiretroviral treatment, according to a presentation last week at the [American Society of Gene & Cell Therapy (ASGCT) annual meeting](https://annualmeeting.asgct.org/).",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 22,
@@ -149,37 +329,89 @@
       "id": 25,
       "url": "https://minerva-access.unimelb.edu.au/server/api/core/bitstreams/ff44ea1c-f320-4d93-9f4f-fc4024e720ce/content",
       "title": "Review PDF: CRISPR/Cas9 for achieving postintervention HIV control",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "01 was demonstrated to be safe and well tolerated; however, viral rebound was observed in all three participants who underwent analytical treatment interruption, suggesting insufficient activity following a single dose to achieve postintervention ART-free HIV control [33].",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "A 15-year extension study is also planned for participants who received the HIV-targeting CRISPR/ Cas9 therapy EBT-101 (NCT05143307).",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 26,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13257677",
       "title": "Identifying Conserved Regions in HIV-1 Proteins by Entropy (2025)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "While variable regions enable immune escape, hyperconserved regions are critical for viral function and represent promising targets for novel therapeutic interventions.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 27,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7434968",
       "title": "Frontiers review 2020: Designing Safer CRISPR/Cas9 Therapeutics for HIV",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "ed with the human genome and have a high similarity to HIV, they are not the driving factor for off-target editing.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "This review highlights four widely used methods for detecting off-target events: (1) genome-wide unbiased identification of double-stranded break events enabled by sequencing (GUIDE-Seq), (2) discovery of _in situ_ Cas off-targets and verification by sequencing (DISCOVER-Seq), (3) circularization for _in vitro_ reporting of cleavage effects by sequencing (CIRCLE-Seq), and (4) breaks labeling _in situ_ and sequencing (BLISS).",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 28,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4941621",
       "title": "Host Double Strand Break Repair Generates HIV-1 Strains Resistant to CRISPR/Cas9",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "ions did lead to HIV-1 strains resistant to CRISPR editing, many of the resistant strains were due to DSB repair associated mutagenesis.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 29,
       "url": "https://www.medscape.com/viewarticle/first-human-trial-crispr-gene-therapy-hiv-2024a1000dx5",
       "title": "Medscape 2024: First-in-Human Trial of CRISPR Gene Therapy for HIV (EBT-101)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "we're continuing to follow these patients.\" HIV RNA levels rebounded in all four participants who had antiretroviral interruption, but one patient had a delayed rebound of almost 16 weeks along with a significant drop in the HIV reservoir.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "SUGGESTED FOR YOU \"There was no off-target DNA damage that's been identified so far,\" Presti said.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "who had antiretroviral interruption, but one patient had a delayed rebound of almost 16 weeks along with a significant drop in the HIV reservoir.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 30,
       "url": "https://link.springer.com/article/10.1007/s11904-025-00769-6",
       "title": "Curr HIV/AIDS Rep 2025: CRISPR Applications in HIV Management",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "In treatment, two ongoing clinical trials – one targeting a viral co-receptor on hematopoietic stem cells (HSCs) and the other excising proviral DNA – illustrate the potential of CRISPR/Cas-mediated cures, despite challenges such as low editing efficiency and off-target effects.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 31,
@@ -191,19 +423,49 @@
       "id": 32,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4786927",
       "title": "Wang G et al. 2016 Mol Ther: CRISPR-Cas9 Can Inhibit HIV-1 Replication but NHEJ Repair Facilitates Virus Escape",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "However, the virus rapidly and consistently escaped from this inhibition.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "nd breakthrough replication resulting in large syncytia was observed at 12–14 days ( **[Figure 2b](https://pmc.ncbi.nlm.nih.gov/articles/PMC4786927/#fig2)**).",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Rev, and gEnv2) exhibits a more sustained antiviral effect (breakthrough replication in 20–43 days; **[Figure 2b](https://pmc.ncbi.nlm.nih.gov/articles/PMC4786927/#fig2)**) than targeting less conserved domains (gGag2, gVpr, gEnv1, and gNef; breakthrough replication in 11–17 days; **[Figure 2b](https://pmc.ncbi.nlm.nih.gov/articles/PMC4786927/#fig2)**).",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "egion of the LTR promoter, was more delayed and resulted in breakthrough replication at 19 days.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 33,
       "url": "https://www.mdpi.com/2073-4425/16/8/875",
       "title": "Genes 2025: CRISPR/Cas13-Based Anti-RNA Viral Approaches",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "This review discusses up-to-date applications of Cas13 in targeting a wide range of RNA viruses, including SARS-CoV-2, HIV, dengue, influenza, and other RNA viruses, focusing on its therapeutic potential.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 34,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4976696",
       "title": "Methods for Optimizing CRISPR-Cas9 Genome Editing Specificity (Tsai & Joung review)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "3.2 kb, uses a 20-23-nt guide RNA, and recognizes a 5′-NNGRRT PAM. | Smaller size allows AAV packaging with one or two sgRNAs in an all-in-one vector. Specificity improvements were observed with some guides by BLESS, GUIDE-seq, and t",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 35,
@@ -215,19 +477,37 @@
       "id": 36,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6356401",
       "title": "CRISPR/Cas9 in Dictyostelium review (U6 poly-T termination)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Target sequences containing more than a four-thymidine repeat should be avoided because they are known as a termination signal for RNA polymerase III.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 37,
       "url": "https://www.globenewswire.com/news-release/2025/09/15/3149947/0/en/excision-biotherapeutics-announces-positive-preclinical-data-highlighting-the-safety-potency-and-development-progress-of-the-hepatitis-b-ebt-107-program-at-the-ice-hbv-hepatitis-b-.html",
       "title": "Excision BioTherapeutics PR Sept 2025: Positive preclinical data for HBV EBT-107 program",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "ighting the Safety, Potency and Development Progress of the Hepatitis B EBT-107 Program at the ICE-HBV “Hepatitis B Cure Symposium” September 15, 2025 08:00 ET\\| Source: [Excision BioTherapeutics](https://www.globenewswire.com/en/search/organization/Excision%2520BioTherapeutics)FollowExcision BioTherapeutics * * * Share - * * * – Oral presentation highlights significant reduction in HBV DNA integration and other clinically-relevant biomarkers from the EBT-107 therapeutic candidate in preclinical mouse models WAT",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 38,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5014588",
       "title": "CRISPR guide RNA design for research applications (review)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "so that the terminator sequence for the promoter can be excluded from the gRNA sequence; and (d) the cloning strategy, which might put additional constraints on gRNA sequence and will impact the design of the specific oligonucleotides to be synthesized and either used as a template for RNA production or cloned into an expression vector.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 39,
@@ -245,30 +525,226 @@
       "id": 41,
       "url": "https://excisionbiotherapeutics.com/pipeline",
       "title": "Excision BioTherapeutics pipeline page (accessed Oct 2026)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "CodeProgramIndicationStage EBT-101 ### HIV cure research HIV-1 infectionClinical research↗ EBT-201 ### Viral reservoir program Chronic viral diseasePreclinical↗ EBT-301 ### Next-generation editing Emerging targetsDiscovery↗ Development path ## Every milestone is a promise to keep testing.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "A focused pipeline for _durable cures._ We are advancing a portfolio of CRISPR-based investigational therapies against viral diseases where persistence remains the central challenge. Our approach ## Start with the biol",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 42,
       "url": "https://crisprmedicinenews.com/news/cmn-weekly-20-march-2026-your-weekly-crispr-medicine-news",
       "title": "CRISPR Medicine News Weekly (20 March 2026)",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "ne marrow mononuclear cells in a humanised mouse model and ~12-fold lower HIV plasma titres after challenge.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 43,
       "url": "https://www.nature.com/articles/s42003-025-08499-6",
       "title": "Commun Biol 2025: Unique molecular signatures in rebound viruses from ART and CRISPR-treated humanized mice",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "The molecular viral signatures demonstrate an accelerated HIV-1 drug resistance escape from ART rather than from the generation of CRISPR mutants.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "of the viral elimination rate was further advanced by using dual CRISPR targeting host CCR5 and HIV-1 LTR-Gag in the infected and LA-ART suppressed hu-mice[14](https://www.nature.com/articles/s42003-025-08499-6#ref-CR14 \"Dash, P.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 44,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8473377",
       "title": "Nguyen et al. 2021 Viruses (published): Efficient Inhibition of HIV Using CRISPR/Cas13d Nuclease System",
-      "accessed": "2026-10-22"
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Furthermore, simultaneous targeting of four distinct, non-overlapping sites in the HIV-1 transcript resulted in robust inhibition of HIV-1 replication.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "f HIV-1 group-specific antigen (gag), polymerase (pol), and central polypurine tract (cPPT) genes and showed that these gRNAs along with CasRx efficiently inhibit HIV replication.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "CasRx and gRNA plasmid nucleofection inhibited HIV replication in primary CD4+ T cells and suppressed the expression of viral RNA from activated latent HIV-1 provirus.",
+          "added": "2026-10-22"
+        }
+      ]
     },
     {
       "id": 45,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8922418",
       "title": "Updates on CRISPR-based gene editing in HIV-1/AIDS research (2022 review)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "rgeting tools derived from or functioning like CRISPR/Cas9, including base editor, prime editing, SHERLOCK, DETECTR, PAC-MAN, ABACAS, pfAGO, have been developed and optimized for pathogens detection and diseases correction.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5700367",
+      "title": "Combinatorial CRISPR-Cas9 and RNA Interference Attack on HIV (Amsterdam group)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "combination of CRISPR-Cas9 and RNAi antivirals, we observed additive inhibition, much like what was reported for antiviral drugs.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "overlapping viral sequence was attacked by the antivirals, rapid escape from a CRISPR-Cas9 antiviral, assisted by the error-prone nonhomologous end joining (NHEJ) DNA repair machinery, accelerated the development of cross-resistance to the other CRISPR-Cas9 or RNAi antiviral.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9262118",
+      "title": "Pathways Toward a Functional HIV-1 Cure: Balancing Promise and Perils for CRISPR Therapeutics",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Identifying efficacious target sites and multiplex gRNA combinations and ensuring coverage against divergent viral strains are key questions in applying this technology in HIV-1 therapeutics.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/K03455",
+      "title": "GenBank K03455.1: HIV-1 HXB2CG complete genome (NCBI, HXB2 reference sequence)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "LOCUS HIVHXB2CG 9719 bp ss-RNA linear VRL 21-OCT-2002 DEFINITION Human immunodeficiency virus type 1 (HXB2), complete genome; HIV1/HTLV-III/LAV reference genome.",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "LKNEAVRHFPRIWLHGLGQ HIYETYGDTWAGVEAIIRILQQLLFIHFQNWVST\" CDS join(5831..6045,8379..8424) /note=\"tat protein\" /codon_start=1 /protein_id=\"AAB50256.1\" /translation=\"MEPVDPRLEPWKHPGSQPKTACTNCYCKKCCFHCQVCFITKALG ISYGRKKRRQRRRAHQNSQTHQASLSKQPTSQPRGDPTGPKE\" exon 5831..6045 /note=\"tat protein, first expressed exon\" /number=2 CDS join(5970..6045,8379..8653) /note=\"trs protein\" /codon_start=1 /protein_id=\"AAB50257.1\" /translation=\"MAGRSGDSDEELIRTVRLIKLLYQSNPPPNPEGTRQARRNRRRR WRERQRQIHSISERILGTYLGRSAEPVPLQLPPLERLTLDCNEDCGT",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "/isolate=\"HXB2\" /db_xref=\"taxon:11676\" /note=\"HTLV-III/LAV\" repeat_region 1..634 /note=\"5' LTR\" /rpt_type=long_terminal_repeat repeat_region 454..551 /note=\"R repeat 5' copy\" mRNA 455..9635 /product=\"HXB2 genomic mRNA\" prim_transcript 455..9635 /note=\"tat, trs, 27K subgenomic mRNA\" intron 744..5777 /note=\"tat, trs, 27K mRNA intron 1\" CDS 790..2292 /note=\"gag polyprotein\" /codon_start=1 /protein_id=\"AAB50258.1\" /translation=\"MGARASVLSGGELDRWEKIRLRPGGKKKYKLKHIVWASRELERF AVNPGLLETSEGCRQILGQLQPSLQTGSEELRSLYNTVATLYC",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "mRNA\" intron 744..5777 /note=\"tat, trs, 27K mRNA intron 1\" CDS 790..2292 /note=\"gag polyprotein\" /codon_start=1 /protein_id=\"AAB50258.1\" /translation=\"MGARASVLSGGELDRWEKIRLRPGGKKKYKLKHIVWASRELERF AVNPGLLETSEGCRQILGQLQPSLQTGSEELRSLYNTVATLYCVHQRIEIKDTKEALD KIEEEQNKSKKKAQQAAADTGHSNQVSQNYPIVQNIQGQMVHQAISPRTLNAWVKVVE EKAFSPEVIPMFSALSEGATPQDLNTMLNTVGGHQAAMQMLKETINEEAAEWDRVHPV HAGPIAPGQMREPRGSDIAGTTSTLQEQIGWMTNNPPIPVGEIYKRWIILGLNKIVRM YSPTSILDIRQGPKEPFRDYVDRFYKTLRAEQASQEVKNWMTETLLVQNANPDCKTIL KALGPAATLEEMMTACQGVGGP",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "RPGNFLQ SRPEPTAPPEESFRSGVETTTPPQKQEPIDKELYPLTSLRSLFGNDPSSQ\" CDS 2358..5096 /note=\"pol polyprotein (NH2-terminus uncertain)\" /codon_start=1 /protein_id=\"AAB50259.1\" /translation=\"MSLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGP TPVNIIGRNLLTQIGCTLNFPISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEIC TEMEKEGKISKIGPENPYNTPVFAIKKKDSTKWRKLVDFRELNKRTQDFWEVQLGIPH PAGLKKKKSVTVLDVGDAYFSVPLDEDFRKYTAFTIPSINNETPGIRYQYNVLPQGWK GSPAIFQSSMTKILEPFRKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLLRW GLTTPDKKHQKEPPFLWMGYELHPDKWTVQPIVLPEKDSWTVNDI",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "GFPVTPQVPLRPMTYKAAVDLSHFLKEKGGLEGLIH SQRRQDILDLWIYHTQGYFPD\" repeat_region 9086..9719 /note=\"3' LTR\" /rpt_type=long_terminal_repeat repeat_region 9540..9636 /note=\"R repeat 3' copy\" regulatory 9612..9617 /regulatory_class=\"polyA_signal_sequence\" /note=\"HXB2 mRNA polyadenyation signal\" ORIGIN 1 tggaagggct aattcactcc caacgaagac aagatatcct tgatctgtgg atctaccaca 61 cacaaggcta cttccctgat tagcagaact acacaccagg gccagggatc agatatccac 121 tgacctttgg atggtgctac aagctagtac cagttgagcc agagaagtta gaagaagcca 181 acaaaggaga gaacac",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_001802",
+      "title": "GenBank NC_001802.1: HIV-1 HXB2 RefSeq (NCBI, modern feature annotation)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "ribed into RNA, but the 5' one is suppressed\" 5'UTR 97..181 primer_bind 182..199 gene 336..4642 /gene=\"gag-pol\" /locus_tag=\"HIV1gp1\" /db_xref=\"GeneID:155348\" CDS join(336..1637,1637..4642) /gene=\"gag-pol\" /locus_tag=\"HIV1gp1\" /ribosomal_slippage /note=\"fusion protein consisting of the viral structural proteins and enzymes; cleaved by the viral protease into individual mature proteins; The processing products of the Gag and Gag-Pol polyproteins were annotated with the help of Pettit et al., 2003 a",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "[PMID:21248851]\" /note=\"viral structural protein; forms the core of HIV-1 virions; p24\" /protein_id=\"NP_579880.1\" mat_peptide 1425..1466 /gene=\"gag\" /locus_tag=\"HIV1gp2\" /product=\"p2\" /note=\"Processing of Gag-Pol by the protease domain dimer starts with cleavage between the p2 and nucleocapsid proteins.\" /protein_id=\"NP_579882.1\" mat_peptide 1467..1631 /gene=\"gag\" /locus_tag=\"HIV1gp2\" /product=\"nucleocapsid\" /experiment=\"DESCRIPTION:[PMID:1639074]\" /experiment=\"DESCRIPTION:[PMID:7666546]\" /note=\"viral structura",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "mat_peptide 3776..4639 /gene=\"gag-pol\" /locus_tag=\"HIV1gp1\" /product=\"integrase\" /experiment=\"DESCRIPTION:[PMID:7983732]\" /experiment=\"DESCRIPTION:[PMID:8035478]\" /note=\"mediates integration of the viral DNA into the infected cell chromosome\" /protein_id=\"NP_705928.1\" gene 336..1838 /gene=\"gag\" /locus_tag=\"HIV1gp2\" /db_xref=\"GeneID:155030\" CDS 336..1838 /gene=\"gag\" /locus_tag=\"HIV1gp2\" /note=\"The processing products of the Gag and Gag-Pol polyproteins were annotated with the help of Pettit et al., 2003 an",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "PPLERLTLDCNEDCGTSGTQGVGSPQI LVESPTVLESGTKE\" gene 5608..5856 /gene=\"vpu\" /locus_tag=\"HIV1gp7\" /db_xref=\"GeneID:155945\" CDS 5608..5856 /gene=\"vpu\" /locus_tag=\"HIV1gp7\" /note=\"p16; viral protein U; viral accessory protein important for virus replication in vivo; promotes degradation of CD4 and down-regulates cell surface expression of MHC class I proteins; helps mediate efficient virus particle release from infected cells; reported to induce apoptosis by suppressing the nuclear factor kappaB-depende",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "FIICFILHGRVI VSLPSVLFDPSVLQVLLNQVLLNSCVELQ\" gene 8343..8963 /gene=\"nef\" /locus_tag=\"HIV1gp9\" /db_xref=\"GeneID:156110\" CDS 8343..8963 /gene=\"nef\" /locus_tag=\"HIV1gp9\" /note=\"p27; negative factor; viral accessory protein; important for virus replication in vivo; determinant of HIV-1 pathogenesis; down-regulates cell surface CD4 and MHC class I molecules; enhances virus infectivity through; interactions with multiple cellular signaling proteins; This particular nucleotide sequence has a premature st",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "url": "https://clinicaltrials.gov/study/NCT05144386",
+      "title": "ClinicalTrials.gov NCT05144386: Study of EBT-101 in Aviremic HIV-1 Infected Adults on Stable ART",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "of EBT-101 in Aviremic HIV-1 Infected Adults on Stable ART Overall Status: COMPLETED Start Date: 2022-01-24 Last Update Posted (submit): 2024-11-27 Phases: ['PHASE1'] Enrollment: 6 (ACTUAL) Lead Sponsor: Excision BioTherapeutics Brief Summary: This is a First in Human (FIH) study of EBT-101 administered IV to aviremic HIV-1 infected adults on stable antiretroviral therapy (ART).",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Last Update Posted (submit): 2024-11-27 Phases: ['PHASE1'] Enrollment: 6 (ACTUAL) Lead Sponsor: Excision BioTherapeutics Brief Summary: This is a First in Human (FIH) study of EBT-101 administered IV to aviremic HIV-1 infected adults on stable antiretroviral therapy (ART).",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "url": "https://www.hiv.lanl.gov/content/sequence/HIV/MAP/HXB2.xlsx",
+      "title": "LANL HIV Database: HXB2 reference sequence (K03455) annotated map with per-position entropy (HXB2.xlsx)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "' LTR TAR element start 454 5' LTR 455 5' LTR 5' LTR U3 end 456 5' LTR 5' LTR R repeat start; +1 mRNA start site 457 5' LTR 476 5' LTR TAR bulge start 477 5' LTR 478 5' LTR TAR bulge end 479 5' LTR 483 5' LTR TAR loop start 484 5' LTR 488 5' LTR TAR loop end 489 5' LTR 513 5' LTR TAR element end 514 5' LTR 527 5' LTR Poly-A signal sequence start 528 5' LTR 532 5' LTR Poly-A signal sequence end 533 5' LTR 551 5' LTR 5' LTR R repeat end 552 5' LTR 5' LTR U5 start 553 5' LTR 560 5' LTR U5 binding region start 561 5' LTR",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "rt 428 5' LTR 431 5' LTR TATA Box end 432 5' LTR 453 5' LTR TAR element start 454 5' LTR 455 5' LTR 5' LTR U3 end 456 5' LTR 5' LTR R repeat start; +1 mRNA start site 457 5' LTR 476 5' LTR TAR bulge start 477 5' LTR 478 5' LTR TAR bulge end 479 5' LTR 483 5' LTR TAR loop start 484 5' LTR 488 5' LTR TAR loop end 489 5' LTR 513 5' LTR TAR element end 514 5' LTR 527 5' LTR Poly-A signal sequence start 528 5' LTR 532 5' LTR Poly-A signal sequence end 533 5' LTR 551 5' LTR 5' LTR R repeat end 552 5' LTR 5'",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "n entropy 0.7835 gag p17 MA (791-1186): mean entropy 0.3664 gag p24 CA (1186-1878): mean entropy 0.2073 protease (2253-2549): mean entropy 0.2002 pol RT p51 (2550-3869): mean entropy 0.2022 pol RNaseH (3870-4229): mean entropy 0.2214 pol IN (4230-5093): mean entropy 0.1598 cPPT (4781-4785): mean entropy 0.0112 vif (5041-5619): mean entropy 0.26 vpr (5559-5795): mean entropy 0.2616 tat exon1 (5831-6045): mean entropy 0.3129 rev exon1 (5970-6045): mean entropy 0.3299 vpu (6062-6310): mean entropy 0.4378 env gp120 (6309-775",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "mean entropy 0.2214 pol IN (4230-5093): mean entropy 0.1598 cPPT (4781-4785): mean entropy 0.0112 vif (5041-5619): mean entropy 0.26 vpr (5559-5795): mean entropy 0.2616 tat exon1 (5831-6045): mean entropy 0.3129 rev exon1 (5970-6045): mean entropy 0.3299 vpu (6062-6310): mean entropy 0.4378 env gp120 (6309-7757): mean entropy 0.4433 RRE (7710-8061): mean entropy 0.2156 env gp41 (7758-8792): mean entropy 0.3234 tat exon2 (8379-8424): mean entropy 0.4311 rev exon2 (8379-8653): mean entropy 0.3899 nef (8797-9168): me",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "protein (frame 1) | protein (frame 2) | protein (frame 3) | entropy (LANL's 2022 DNA filtered web alignment) | RNA/DNA features | RNA/DNA features notes ...",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/None",
+      "title": "Ran et al. 2015 Nature: In vivo genome editing using Staphylococcus aureus Cas9",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 53,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC",
+      "title": "HTTP 404 [Not Found]",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 54,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13642003",
+      "title": "Banik et al. 2026 Front Genome Ed: Combined RNA- and DNA-targeting CRISPR ribonucleoproteins enhance suppression of HBV transcripts",
       "accessed": "2026-10-22"
     }
   ]
