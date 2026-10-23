@@ -10,8 +10,8 @@
 In-silico design of CRISPR guide RNAs that cleave and inactivate the
 integrated HIV-1 proviral genome, identifying the target region that is (a)
 conserved across HIV-1 strains, (b) least similar to human genes, and (c)
-grounded in published evidence. Computational/literature work only; no
-wet-lab; NOT pushed to GitHub yet.
+grounded in published evidence. Computational/literature work only; no wet-lab. Published at
+github.com/drwjkirkpatrick-web/crispr-hiv-ward.
 
 ## 2. Current Status
 ### Done

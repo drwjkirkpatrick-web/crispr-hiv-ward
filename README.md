@@ -1,10 +1,17 @@
 # crispr-hiv-ward
 
+[![Version](https://img.shields.io/github/v/tag/drwjkirkpatrick-web/crispr-hiv-ward?label=version&sort=semver)](https://github.com/drwjkirkpatrick-web/crispr-hiv-ward/releases)
+[![Paper](https://img.shields.io/badge/paper-PDF-red)](paper/hiv-crispr-ward.pdf)
+[![Tests](https://img.shields.io/badge/tests-39%2F39-brightgreen)](tests/)
+[![Platform](https://img.shields.io/badge/platform-NVIDIA%20Jetson%20ARM64-green)]()
+[![Python](https://img.shields.io/badge/python-3.10+-blue)]()
+[![License](https://img.shields.io/badge/license-TBD-lightgrey)]()
+
 In-silico design of CRISPR guide RNAs that target and inactivate the
 integrated HIV-1 proviral genome — selecting the target regions that are
 most conserved across viral strains and least similar to human genes.
 
-**Status: research complete, v1.0 — local repository only (not on GitHub).**
+**Status: research complete, v1.0.1.**
 
 ## Headline findings
 
