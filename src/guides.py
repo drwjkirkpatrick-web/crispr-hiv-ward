@@ -203,7 +203,7 @@ def main():
 
     out = os.path.join(RESULTS, "scan_input.tsv")
     with open(out, "w") as fh:
-        fh.write("guide_id\tsystem\tsequence\n")
+        fh.write("#guide_id\tsystem\tsequence\n")
         for r in sel:
             fh.write(f"{('SP' if r['system'] == 'SPCAS9' else 'SA')}"
                      f"_{r['pos']}{r['strand']}\t{r['system']}\t{r['guide']}\n")
