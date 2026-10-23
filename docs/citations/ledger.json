@@ -782,6 +782,12 @@
       "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44",
       "title": "GENCODE release 44: protein-coding transcripts (data source)",
       "accessed": "2026-10-22"
+    },
+    {
+      "id": 58,
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/M19921",
+      "title": "GenBank M19921: pNL4-3 molecular clone record (NL4-3 proviral genome extracted)",
+      "accessed": "2026-10-22"
     }
   ]
 }

@@ -1,3 +1,3 @@
-strategy	guide_a	seq_a	guide_b	seq_b	tier_a	tier_b	cons_a	cons_b	excised_fragment_bp	rationale
-dual excision: LTR guide + internal guide	SP_628+	TCTAGCAGTGGCGCCCGAAC	SA_5067+	TGTGTGGCAAGTAGACAGGAT	A+	A+	0.88	0.48	4439	LTR guide cuts both proviral LTRs (identical in vivo) and the internal guide is an independent conserved target that mitigates NHEJ-mediated escape.
-triple-guide escape-hardened excision	SP_628+	TCTAGCAGTGGCGCCCGAAC	SA_5067+	TGTGTGGCAAGTAGACAGGAT	A+	A+				Multiplexing independent conserved sites reduces viral escape (Wang 2016).
+strategy	guide_a	seq_a	guide_b	seq_b	guide_c	seq_c	tier_a	tier_b	tier_c	cons_a	cons_b	cons_c	excised_fragment_bp	rationale
+dual excision: LTR guide + internal guide	SP_628+	TCTAGCAGTGGCGCCCGAAC	SA_5067+	TGTGTGGCAAGTAGACAGGAT			A+	A+		0.88	0.48		4439	LTR guide cuts both proviral LTRs (identical in vivo) and the internal guide is an independent conserved target that mitigates NHEJ-mediated escape.
+triple-guide escape-hardened excision	SP_628+	TCTAGCAGTGGCGCCCGAAC	SA_5067+	TGTGTGGCAAGTAGACAGGAT	SP_7794+	GGAGCAGCAGGAAGCACTAT	A+	A+	A+	0.88	0.48	0.76		Multiplexing independent conserved sites reduces viral escape (Wang 2016).

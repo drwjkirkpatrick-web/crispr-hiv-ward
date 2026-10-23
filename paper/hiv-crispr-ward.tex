@@ -1,0 +1,358 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage[expansion=false]{microtype}
+\setlist{itemsep=2pt,topsep=4pt}
+\emergencystretch=3em
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,urlcolor=blue!60!black}
+\newcommand{\src}[1]{[#1]}
+\newcommand{\HH}{HIV-1}
+\input{numbers}
+
+\title{An In-Silico Pipeline for CRISPR--Cas9 Guide Design Against the \HH{}
+  Proviral Genome: Cross-Subtype Conservation, Genome-Wide Human Off-Target
+  Exclusion, and Transcriptome Similarity Screening}
+\author{Walker, ND\thanks{Independent research; Oregon, USA. Computational
+  work performed on a NVIDIA Jetson Orin Nano (ARM64, 8\,GB). All code, data,
+  results tables, and the citation ledger are in the accompanying repository
+  (\texttt{crispr-hiv-ward}).}}
+\date{October 22, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Antiretroviral therapy suppresses but does not eradicate HIV-1, and the
+first-in-human CRISPR excision trial (EBT-101) was safe but did not provide
+durable suppression after treatment interruption. Target and guide-RNA
+selection therefore remain open design problems. We built a fully scripted,
+reproducible pipeline that (i) star-aligns \nstrains{} diverse HIV-1 complete
+genomes to the HXB2 reference to quantify cross-strain conservation of every
+candidate guide; (ii) exhaustively screens guides against GRCh38 for
+off-target cleavage sites with up to four mismatches (both strands; NGG/NAG
+for SpCas9, NNGRRT/NNGRRV for SaCas9); and (iii) measures exact $k$-mer
+sharing between the \HH{} genome and both the human genome and the human
+protein-coding transcriptome. Of 1,365 enumerated protospacers, 668 passed
+design filters and 190 (150 SpCas9, 40 SaCas9) underwent genome-wide
+screening. No guide had a single exact-match off-target in the 3.1-billion-base
+human genome; 63 guides carried no off-target with $\le$2 mismatches and no
+transcriptome hit with $\le$1 mismatch (tier A+). Region-level analysis
+identifies the 5$'$ LTR U5 region and the packaging-signal leader as the
+combination of high conservation and minimal human similarity, whereas
+\emph{pol} and \emph{env} carry substantially more human-shared 20-mers,
+consistent with endogenous-retrovirus ancestry. Notably, guides in the
+otherwise most conserved leader region exactly match human \emph{NOTCH3}
+transcripts and were excluded. We recommend a dual-guide design (5$'$LTR U5 +
+integrase; 4,439\,bp excision) with a triple-guide escape-hardened variant,
+and provide all sequences, off-target tables, and the evidence ledger.
+\end{abstract}
+
+\section{Introduction}
+
+Combination antiretroviral therapy (ART) controls plasma viremia but cannot
+reach the latent proviral reservoir, which re-seeds viremia when treatment
+stops. Programmable nucleases offered a radical alternative: rather than
+blocking replication, excise the proviral DNA itself. Early studies showed
+that CRISPR--Cas9 can disrupt or excise integrated \HH{} DNA in cell
+lines\src{1}, primary T cells\src{6}, and across the LTR--gag
+region\src{2}, and that multiplexed SaCas9 guide RNAs delivered by AAV can
+excise proviral fragments in animal models\src{9}. Combining long-acting
+ART with CRISPR excision eliminated infectious virus in a subset of
+humanized mice\src{4}.
+
+This line of work has reached humans. EBT-101 (Excision BioTherapeutics) is
+an AAV9 vector carrying SaCas9 with two guide RNAs targeting the LTR and
+gag (construct ``AAV9-SaCas9-GagD-LTR1'')\src{55,20}. Its phase 1/2 trial
+(NCT05144386) enrolled six participants, completed in November
+2024\src{50,55}, and reported no serious adverse events and no identified
+off-target DNA damage\src{18,29}. However, HIV RNA rebounded in all
+participants who interrupted ART\src{29,20,21}, and the program is listed as
+inactive with the curator note ``safe, but does not provide long-term viral
+suppression''\src{55}. The lesson is not that proviral excision failed as a
+concept, but that target selection, guide quality, and reservoir coverage
+were insufficient\src{22,47}. Two design questions follow directly: which
+viral regions should be cut, and how much do candidate guides resemble the
+human genome they must not cut?
+
+This paper addresses both questions computationally. We ask: \emph{which
+part of the \HH{} genome is the best CRISPR target, considering cross-strain
+conservation, functional importance documented in the literature, and least
+similarity to human genes?} We contribute: (1) a reproducible pipeline that
+quantifies conservation across \nstrains{} diverse complete genomes; (2) an
+exhaustive human-genome off-target scan (to four mismatches, both strands,
+canonical and non-canonical PAMs) implemented in C and validated guide by
+guide; (3) a transcriptome similarity screen that catches human-exact guide
+sequences that whole-genome DNA screens under-weight; and (4) a ranked
+target-region table and concrete dual/triple guide designs.
+
+\section{Background and related work}
+
+\subsection{Target regions used by published studies}
+Published anti-\HH{} CRISPR work has targeted the long terminal repeats
+(LTRs)\src{1,6,2}, gag\src{9}, and combinations thereof. Because the
+integrated provirus is flanked by two LTRs that are identical copies of the
+same sequence, a single LTR-targeting guide cleaves both ends, and NHEJ
+re-joining excises the intervening genome\src{9}. Yin et al.\ excised
+proviral DNA in vivo with SaCas9 and multiplex gRNAs\src{9}, and Dash et
+al.\ estimated excision of approximately 80\% of 5$'$LTR--gag and gag--3$'$LTR
+fragments in humanized mice, reporting ``No CRISPR-Cas9 mediated off-target
+effects are detected''\src{4}.
+
+\subsection{Viral escape}
+Cas9 pressure selects for resistant virus: NHEJ repair of the cut site
+inserts indels, and escape variants emerge rapidly when non-conserved
+regions are attacked (breakthrough replication in 11--17 days) and more
+slowly for conserved targets (20--43 days)\src{32,3}. Resistance mutations
+cluster at the cleavage site\src{3}, and host double-strand-break repair
+directly generates CRISPR-resistant strains\src{28}. The standard
+mitigation is multiplexing several conserved, independent targets\src{3,22,47}.
+
+\subsection{Off-target risk}
+Subtype-specific off-target analyses of LTR guide collections found that
+149 of 4,114 viable guides (3.60\%) retained predicted human off-target
+cleavage, of which only 14 of 326 sites (4.29\%) were exonic\src{11}.
+Unbiased assays (GUIDE-seq, CIRCLE-seq, whole-genome sequencing) have
+repeatedly failed to detect notable off-target cleavage for anti-\HH{}
+guides\src{27}, and clinical monitoring of EBT-101 participants likewise
+identified no off-target DNA damage\src{29}. Human endogenous retroviruses
+(HERVs) share ancestry with \emph{gag} and \emph{pol}, but an analysis of
+predicted off-targets concluded HERV loci are ``not the driving factor for
+off-target editing'' for currently used guides\src{27}; our region-level
+similarity data (Section~\ref{sec:similarity}) add quantitative context.
+
+\subsection{RNA-targeting alternatives}
+Cas13 systems target viral RNA without cutting DNA: LbuCas13a reduced \HH{}
+RNA by 50--80\%\src{8}, and RfxCas13d with crRNAs against conserved
+\emph{gag}/\emph{pol} regions inhibited replication by more than 90\% in
+primary CD4$^+$ T cells\src{44,16}. Combined RNA- and DNA-targeting
+ribonucleoproteins are an active frontier\src{54}. Our pipeline designs
+Cas9 guides; Cas13 candidates are out of scope but the same
+conservation/off-target machinery applies.
+
+\section{Methods}
+
+\subsection{Reference, regions, and strain set}
+All coordinates use the HXB2 reference genome (GenBank K03455, 9,719\,bp)
+and its GenBank feature annotation\src{48,49}, cross-checked against the
+LANL annotated HXB2 map with per-position Shannon entropy\src{51}. We
+define 31 regions: LTR subregions (U3/R/U5, both copies), TAR, the
+packaging signal $\psi$, \emph{gag} (p17, p24), \emph{pol} (protease, RT,
+RNase H, integrase, cPPT), \emph{vif}, \emph{vpr}, \emph{tat}, \emph{rev},
+\emph{vpu}, \emph{env} (gp120, RRE, gp41), and \emph{nef}. The $\psi$
+coordinates remain literature-derived and unverified; all others come from
+the GenBank record or the LANL map. Note that LANL and GenBank label R-region
+boundaries within $\pm$2 nucleotides of each other; we use GenBank
+throughout.
+
+We downloaded \nstrains{} near-full-length complete \HH{} genomes (8.5--9.9\,kb)
+from NCBI via E-utilities, selected for country diversity across Africa,
+Europe, Asia, and the Americas, with subtype labels taken verbatim from
+record titles where present, and excluding records titled as mutants,
+synthetic constructs, or vectors. The NL4-3 proviral genome was extracted
+from the pNL4-3 molecular clone record\src{58}. Together with HXB2 this
+yields 25 genomes for conservation scoring.
+
+\subsection{Conservation}
+Each strain was globally aligned to HXB2 (Biopython PairwiseAligner; match
+$+2$, mismatch $-1$, gap open $-4$, extension $-1$), producing a base at
+every HXB2 position (gaps/ambiguity coded separately). For each candidate
+guide, conservation is the fraction of strains whose aligned sequence
+matches the HXB2-derived guide across the full protospacer \emph{and} whose
+PAM matches at the constrained PAM positions --- i.e., the fraction of
+strains in which the guide site is present unmutated.
+
+\subsection{Guide enumeration and filters}
+Protospacers follow the standard convention: the ordered guide sequence is
+the 20-nt (SpCas9) or 21-nt (SaCas9) sequence immediately 5$'$ of the PAM on
+the PAM-bearing strand. We enumerated every SpCas9 NGG site and every
+canonical SaCas9 NNGRRT site on both strands (1,365 sites). Design filters:
+GC content 40--65\%, no homopolymer run of four or more identical bases
+(this also enforces the U6 promoter poly-T termination rule of standard
+guide design\src{38,35}), and no TTT start. Surviving guides (544 SpCas9,
+124 SaCas9) were ranked by conservation, then GC near 50\%; the top 150
+SpCas9 and top 40 SaCas9 advanced to genome-wide screening.
+
+\subsection{Human off-target scan}
+A purpose-built C tool (\texttt{crispr\_scan}; pthreads, 4-bit packed
+genome) exhaustively scanned GRCh38 (Ensembl primary assembly, release
+113\src{56}) for all sites with Hamming distance $\le$4 to any guide with a
+valid PAM: NGG and NAG for SpCas9, NNGRRT and NNGRRV for SaCas9, both
+strands, with N bases always counted as mismatches. The tool passes 13 unit
+tests including hand-derived strand/PAM vectors, and every screened guide
+was confirmed to hit HXB2 exactly at its expected coordinate and strand
+(190/190), validating the conventions end-to-end. The full 3.1-Gbp scan of
+190 guides completes in approximately five minutes on six ARM cores.
+
+\paragraph{Safety tiers.} A random 20-mer has roughly 30 by-chance
+$\le$3-mismatch sites in a 3.1-Gbp genome, so ``zero $\le$3\,mm sites'' is
+not a meaningful bar. We therefore tier guides by the sites that matter:
+\textbf{A+} --- no genomic off-target with $\le$2 mismatches \emph{and} no
+transcriptome hit with $\le$1 mismatch; \textbf{A} --- no genomic off-target
+with $\le$1 mismatch and no exact transcriptome hit; \textbf{B} ---
+everything else. Cleavage at $\ge$3 mismatches is weak, and sites at 1--2
+mismatches are the residual risk band\src{34,27}.
+
+\subsection{Human-similarity maps}
+We measured exact $k$-mer sharing between the HXB2 genome and (a) GRCh38
+($k=20$ and $k=30$) and (b) GENCODE v44 protein-coding transcripts\src{57}
+($k=20$), using the same packed-scanning tool (rolling $k$-mer, both
+orientations, N-excluded). For every off-target site with $\le$2 mismatches
+(490 sites), we additionally scanned the protein-coding transcriptome at
+$\le$1 mismatch to find guide sequences that could cleave human mRNAs.
+
+\section{Results}
+
+\subsection{Conservation across 25 strains}
+Per-position identity to HXB2 ranged from 80.2\% to 97.3\% (NL4-3, the
+closest subtype-B genome). Table~\ref{tab:regions} summarizes each region's
+median guide conservation alongside the independent LANL entropy
+values\src{51}: the two measures agree (integrase and cPPT are the most
+conserved coding features in both). The 5$'$ LTR U5 region and the R region
+score highest among designable regions (median guide conservation 0.72 and
+0.84), and the leader/$\psi$ region reaches 0.56 with individual guides at
+0.96.
+
+\begin{table}[ht]\centering\small
+\caption{HXB2 regions (GenBank\src{48} / LANL map\src{51} coordinates),
+median guide conservation across 25 strains, LANL per-region mean Shannon
+entropy\src{51} where published, number of tier-A+ guides, and exact
+20-mer sharing with the human genome (hu) and protein-coding transcriptome
+(tx). $^{\dagger}$literature-derived, unverified.}
+\label{tab:regions}
+\input{tables/regions}
+\end{table}
+
+\subsection{Genome-wide off-target screen}
+Across all \nguides{} screened guides there were \textbf{zero exact-match
+(mm=0) off-target sites} in GRCh38. The full mismatch distribution was:
+20 sites at 1 mismatch (17 guides), 470 at 2, 6,773 at 3, and 76,105 at 4.
+Tiers: \naplus{} A+, \na{} A, \nb{} B. The single-mismatch sites are listed
+per guide in the repository; no guide carries more than two.
+
+\subsection{Human-similarity maps}
+\label{sec:similarity}
+The \HH{} genome is strikingly alien to human DNA: \textbf{not a single
+exact 30-mer is shared} between HXB2 and the 3.1-Gbp human genome, and only
+\ktwenty{} of 9,700 possible 20-mer start positions (2.7\%) share an exact
+20-mer with it. Sharing is concentrated where retroviral ancestry predicts:
+RT (53 human-shared 20-mer positions), gp120 (42), integrase (40), gp41
+(31), and p17 (14), versus 1 for 5$'$LTR U5, 0 for $\psi$ and 3$'$LTR U5
+(Table~\ref{tab:regions}).
+
+The transcriptome screen proves this matters at guide resolution: among the
+490 off-target windows with $\le$2 mismatches, 225 have a $\le$1-mismatch
+match in protein-coding transcripts. Critically, the two most conserved
+guides in the entire genome --- SP\_772+ and SP\_771+ in the
+packaging-signal leader, 0.96 and 0.92 conserved across strains --- carry
+\emph{exact} (mm=0) matches to human \emph{NOTCH3} transcripts
+(NOTCH3-201) and would have passed a conservation-first design. They were
+excluded by the transcriptome screen. Other exact transcript matches
+involve \emph{NFX1}, \emph{CHRNA2}, and olfactory-receptor loci.
+
+\subsection{Recommended designs}
+\label{sec:strategy}
+Table~\ref{tab:strategy} lists the recommended multiplex designs, all
+tier A+. The dual design pairs SP\_628+ (5$'$LTR U5, 0.88 conserved, zero
+off-targets $\le$2\,mm) with SA\_5067+ (integrase, 0.48) for a 4,439\,bp
+excision; because in vivo proviral LTRs are identical, the U5 guide cuts
+both LTR ends, and the triple design adds SP\_7794+ (RRE, 0.76) so that
+three independent conserved sites must mutate simultaneously for escape,
+directly implementing the multiplexing mitigation\src{3,32,22}. Runners-up
+for the internal slot were p24 guides (12 tier-A+ guides, 7 human-shared
+20-mers, zero transcriptome hits), vif (0.44), and p17 (0.44).
+
+\begin{table}[ht]\centering\small
+\caption{Recommended tier-A+ guide combinations (protospacer/PAM as read on
+the PAM-bearing strand). Cons.\ = fraction of 25 strains with the guide site
+unmutated.}
+\label{tab:strategy}
+\input{tables/strategy}
+\end{table}
+
+\begin{table}[ht]\centering\small
+\caption{Top tier-A+ guides by conservation. Full tables for all 190 guides,
+including every off-target site and its coordinate, are in the repository.}
+\label{tab:topguides}
+\input{tables/topguides}
+\end{table}
+
+\section{Discussion}
+
+\paragraph{The sweet spot is the LTR U5 region, with p24 as the best
+internal partner.} Our data resolve the design tension cleanly. The most
+\emph{conserved} guides sit in the leader/$\psi$ region (0.96) --- but the
+most conserved guides are exactly the ones that match human transcripts
+(\emph{NOTCH3}), a trap for conservation-first pipelines. The 5$'$ LTR U5
+region offers near-top conservation (0.72--0.88) with essentially no human
+similarity (one human-shared 20-mer position genome-wide), the dual-cut
+excision geometry of the LTRs, and five tier-A+ guides. Among internal
+regions, p24 combines the largest tier-A+ pool (12) with low human sharing,
+whereas \emph{pol} and \emph{env} --- despite excellent functional
+essentiality --- carry the most human-shared sequence, as expected from
+HERV ancestry; this did not produce off-targets for our specific guides
+(consistent with\src{27}), but it lowers the margin of safety for guides
+designed naively in those regions.
+
+\paragraph{Escape remains the binding constraint.} EBT-101's rebound after
+treatment interruption\src{29,20,21} and the documented speed of NHEJ-driven
+escape\src{32,3} both point to the same conclusion: two guides are likely
+insufficient, and reservoir coverage --- not guide safety --- is the hard
+problem. Proviral DNA circles with reformed LTRs can persist after
+excision\src{13}, defective proviruses accumulate from acute infection
+onward\src{15}, and intact inducible proviruses are the true target
+population\src{39}. Our triple design (LTR U5 + integrase + RRE) maximizes
+simultaneous-escape requirements while keeping every guide in tier A+;
+whether three guides suffice against the reservoir is an empirical question
+that only animal and clinical work can answer\src{22,47,43}.
+
+\paragraph{Relationship to EBT-101.} EBT-101 targets GagD and LTR1 with
+SaCas9\src{55,20}. Our pipeline's top LTR guide differs (U5 rather than
+their LTR site) because we required zero $\le$2\,mm off-targets and
+transcriptome cleanliness; whether the published GagD/LTR1 guides would
+pass our tier system is directly testable with the repository pipeline and
+is planned as a benchmark. The clinical experience to date --- safe, no
+off-target damage, but viral rebound\src{18,29,50} --- is consistent with
+our modeling that guide safety is achievable and that reservoir coverage
+and escape are the unsolved problems.
+
+\section{Limitations}
+This is a computational design study; nothing here is experimentally
+validated, and nothing here is medical advice. Specific limitations:
+(1) off-target scanning covers mismatches only, not DNA or RNA bulges, and
+uses NGG/NAG and NNGRRT/NNGRRV PAM sets --- CHOPCHOP/CRISPOR-grade
+re-scoring with bulge models is advisable before any wet-lab use;
+(2) conservation uses \nstrains{} near-full-length genomes selected for
+geographic spread, not a curated subtype-balanced panel, and subtype labels
+come from record titles (only two records carried explicit subtype labels);
+(3) the transcriptome screen covers protein-coding transcripts only
+(GENCODE v44); non-coding RNAs are unscreened;
+(4) $\psi$ coordinates are literature-derived and unverified; LANL and
+GenBank differ by $\pm$2 nt on some LTR feature boundaries;
+(5) SaCas9's NNGRRT PAM yields few designable sites (124 passing), limiting
+AAV-compatible options relative to SpCas9;
+(6) no chromatin, nucleosome, or delivery context is modeled; and
+(7) viral escape dynamics, reservoir size, and excision efficiency are not
+modeled. In silico tier A+ status is a necessary, not sufficient, condition
+for a therapeutic guide.
+
+\section{Data and code availability}
+The repository (\texttt{crispr-hiv-ward}) contains the full pipeline
+(\texttt{src/}), unit tests (39 passing across the Python pipeline and the C
+scanner), all result tables (\texttt{results/}), the strain sequences,
+packed-genome tooling, the citation ledger with verbatim source quotes
+(\texttt{docs/citations/}), and this paper's \LaTeX{} source. The human
+genome (Ensembl release 113\src{56}) and GENCODE v44\src{57} are fetched by
+script; strain sets are fetched from NCBI E-utilities with reproducible
+queries.
+
+\input{sources_block}
+
+\end{document}

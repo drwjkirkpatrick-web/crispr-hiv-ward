@@ -250,12 +250,17 @@ def main():
             "guide_b": internal["guide_id"], "seq_b": internal["sequence"],
             "guide_c": internal2["guide_id"], "seq_c": internal2["sequence"],
             "tier_a": ltr["tier"], "tier_b": internal["tier"],
-            "tier_c": internal2["tier"], "excised_fragment_bp": "",
+            "tier_c": internal2["tier"],
+            "cons_a": ltr["cons"], "cons_b": internal["cons"],
+            "cons_c": internal2["cons"], "excised_fragment_bp": "",
             "rationale": "Multiplexing independent conserved sites reduces "
                          "viral escape (Wang 2016)."})
     with open(os.path.join(RESULTS, "recommended_strategy.tsv"), "w") as fh:
         if strat:
-            cols = list(strat[0].keys())
+            cols = ["strategy", "guide_a", "seq_a", "guide_b", "seq_b",
+                    "guide_c", "seq_c", "tier_a", "tier_b", "tier_c",
+                    "cons_a", "cons_b", "cons_c", "excised_fragment_bp",
+                    "rationale"]
             fh.write("\t".join(cols) + "\n")
             for s in strat:
                 fh.write("\t".join(str(s.get(c, "")) for c in cols) + "\n")
