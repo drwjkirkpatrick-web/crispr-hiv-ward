@@ -28,7 +28,7 @@ wet-lab; NOT pushed to GitHub yet.
 - [x] README.md; 39/39 tests green; all work committed locally (7 commits)
 
 ### In Progress
-- [ ] (awaiting user) GitHub push — deliberately deferred per user instruction
+- [x] GitHub push: drwjkirkpatrick-web/crispr-hiv-ward (public, main, 9 commits)
 
 ### Not Started
 - [ ] Benchmark published guides (GagD/LTR1) through the tier system
@@ -50,7 +50,7 @@ wet-lab; NOT pushed to GitHub yet.
   diversity is the honesty metric.
 
 ## 5. Next Step (only ONE)
-> **Next:** On user request: create GitHub repo and push (currently deferred).
+> **Next:** Optional: benchmark published guides (GagD/LTR1) through the tier system.
 
 ## 6. Environment & Tooling Notes
 - Use `/usr/bin/python3` (biopython 1.88 + numpy 2.2.6); the venv `python3`
@@ -64,7 +64,7 @@ wet-lab; NOT pushed to GitHub yet.
 ## 7. Recent Session Log
 - 2026-10-22: Full research cycle completed step-by-step: pipeline, scanner,
   scans, analysis, LANL region verification, 9-page cited paper, README;
-  7 local commits; GitHub push deferred by user.
+  9 commits pushed to github.com/drwjkirkpatrick-web/crispr-hiv-ward.
 - 2026-10-22: Two subagents (literature, C scanner) died on provider 429
   limits; parent absorbed both workstreams (scanner was ~90% complete).
 
