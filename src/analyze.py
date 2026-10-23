@@ -227,8 +227,9 @@ def main():
                                                 -int(r["off_mm4"])))
         return None
 
-    internal = internal_far(("gag", "pol", "psi"))
-    internal2 = internal_far(("env", "vif", "nef", "RRE"))
+    internal = internal_far(("gag", "p17", "p24", "pol", "RT", "RNaseH", "IN",
+                             "protease", "psi"))
+    internal2 = internal_far(("env", "gp120", "gp41", "vif", "nef", "RRE"))
     strat = []
     if ltr and internal:
         lo, hi = sorted((int(ltr["pos"]), int(internal["pos"])))

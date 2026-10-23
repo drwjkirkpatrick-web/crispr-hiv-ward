@@ -292,6 +292,10 @@
         {
           "text": "However, it fell short in preventing viral rebound among the first four participants who initiated a pause in their antiretroviral treatment, as reported at the **International AIDS Conference (AIDS 2024)** in Munich, Germany.",
           "added": "2026-10-22"
+        },
+        {
+          "text": "delivered by a harmless adeno-associated virus (AAV9) vector target precise locations within HIV, specifically GagD and LTR-1",
+          "added": "2026-10-22"
         }
       ]
     },
@@ -745,6 +749,38 @@
       "id": 54,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13642003",
       "title": "Banik et al. 2026 Front Genome Ed: Combined RNA- and DNA-targeting CRISPR ribonucleoproteins enhance suppression of HBV transcripts",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 55,
+      "url": "https://scge.mcw.edu/platform/data/report/clinicalTrials/NCT05144386",
+      "title": "SCGE Platform: EBT-101 trial report (AAV9-SaCas9-GagD-LTR1)",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Drug Product Description | AAV9-SaCas9-GagD-LTR1",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Safe, but does not provide long-term viral suppression",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Completion Date | 2024-11-14",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "url": "https://ftp.ensembl.org/pub/release-113/fasta/homo_sapiens/dna",
+      "title": "Ensembl release 113: Homo sapiens GRCh38 primary assembly DNA (data source)",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 57,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44",
+      "title": "GENCODE release 44: protein-coding transcripts (data source)",
       "accessed": "2026-10-22"
     }
   ]

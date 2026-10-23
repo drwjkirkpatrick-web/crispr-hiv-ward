@@ -33,7 +33,7 @@ def test_regions():
     primary, _ = regions_for(700, 20)
     check("regions: intergenic at 700", primary is None)
     primary, labels = regions_for(1000, 20)
-    check("regions: gag at 1000", primary == "gag" and "gag" in labels)
+    check("regions: p17 (LANL subregion) at 1000", primary == "p17" and "gag" in labels)
     primary, _ = regions_for(540, 20)
     check("regions: R_5 beats U5_5 at 540", primary == "R_5")
     primary, _ = regions_for(556, 20)

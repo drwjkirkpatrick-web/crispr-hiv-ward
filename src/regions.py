@@ -14,27 +14,34 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GB = os.path.join(HERE, "data", "hiv", "K03455_HXB2.gb")
 OUT = os.path.join(HERE, "results", "regions.tsv")
 
-# 1-based inclusive HXB2 coordinates. Source: K03455 GenBank annotation
-# (LTRs 1-634 / 9086-9719; R 454-551 / 9540-9636; CDS spans) + literature
-# subregions marked unverified pending research-notes confirmation.
+# 1-based inclusive HXB2 coordinates. CDS/LTR spans: GenBank K03455 annotation
+# [48]; gene subregions, TAR, cPPT and RRE: LANL HXB2 annotated map (HXB2.xlsx)
+# [51] — both verified. psi remains literature-only [unverified].
 REGIONS = [
     # name, start, end, source
     ("U3_5", 1, 453, "genbank"),
     ("R_5", 454, 551, "genbank"),
-    ("TAR", 454, 512, "literature[unverified]"),  # TAR stem-loop at R start
+    ("TAR", 454, 513, "LANL map"),
     ("U5_5", 552, 634, "genbank"),
     ("psi", 744, 802, "literature[unverified]"),  # packaging signal
     ("gag", 790, 2292, "genbank"),
+    ("p17", 791, 1186, "LANL map"),
+    ("p24", 1186, 1878, "LANL map"),
     ("pol", 2358, 5096, "genbank"),
-    ("cPPT", 4727, 4765, "literature[unverified]"),  # central ppt, inside pol
-    ("CTS", 4885, 4936, "literature[unverified]"),   # central termination, pol
+    ("protease", 2253, 2549, "LANL map"),
+    ("RT", 2550, 3869, "LANL map"),
+    ("RNaseH", 3870, 4229, "LANL map"),
+    ("IN", 4230, 5093, "LANL map"),
+    ("cPPT", 4781, 4785, "LANL map"),
     ("vif", 5041, 5619, "genbank"),
     ("vpr", 5559, 5795, "genbank"),
     ("tat_e1", 5831, 6045, "genbank"),
     ("rev_e1", 5970, 6045, "genbank"),
-    ("vpu", 6062, 6310, "literature[unverified]"),
+    ("vpu", 6062, 6310, "LANL map"),
     ("env", 6225, 8795, "genbank"),
-    ("RRE", 7925, 8034, "literature[unverified]"),   # Rev response element
+    ("gp120", 6309, 7757, "LANL map"),
+    ("RRE", 7710, 8061, "LANL map"),
+    ("gp41", 7758, 8792, "LANL map"),
     ("tat_e2", 8379, 8424, "genbank"),
     ("rev_e2", 8379, 8652, "genbank"),
     ("nef", 8797, 9168, "genbank"),
@@ -45,9 +52,10 @@ REGIONS = [
     ("LTR_3", 9086, 9719, "genbank"),
 ]
 
-PRECEDENCE = ["TAR", "R_5", "R_3", "U3_5", "U3_3", "U5_5", "U5_3", "psi", "gag",
-              "pol", "vif", "vpr", "tat_e1", "rev_e1", "vpu", "env", "RRE",
-              "tat_e2", "rev_e2", "nef"]
+PRECEDENCE = ["TAR", "RRE", "cPPT", "p24", "p17", "RT", "RNaseH", "IN",
+              "protease", "gp120", "gp41",
+              "R_5", "R_3", "U3_5", "U3_3", "U5_5", "U5_3", "psi", "gag",
+              "pol", "vif", "vpr", "tat_e1", "rev_e1", "vpu", "env", "nef"]
 # LTR umbrella regions never become the primary label (their subregions do)
 
 

@@ -1,20 +1,27 @@
 region	start	end	length	source
 U3_5	1	453	453	genbank
 R_5	454	551	98	genbank
-TAR	454	512	59	literature[unverified]
+TAR	454	513	60	LANL map
 U5_5	552	634	83	genbank
 psi	744	802	59	literature[unverified]
 gag	790	2292	1503	genbank
+p17	791	1186	396	LANL map
+p24	1186	1878	693	LANL map
 pol	2358	5096	2739	genbank
-cPPT	4727	4765	39	literature[unverified]
-CTS	4885	4936	52	literature[unverified]
+protease	2253	2549	297	LANL map
+RT	2550	3869	1320	LANL map
+RNaseH	3870	4229	360	LANL map
+IN	4230	5093	864	LANL map
+cPPT	4781	4785	5	LANL map
 vif	5041	5619	579	genbank
 vpr	5559	5795	237	genbank
 tat_e1	5831	6045	215	genbank
 rev_e1	5970	6045	76	genbank
-vpu	6062	6310	249	literature[unverified]
+vpu	6062	6310	249	LANL map
 env	6225	8795	2571	genbank
-RRE	7925	8034	110	literature[unverified]
+gp120	6309	7757	1449	LANL map
+RRE	7710	8061	352	LANL map
+gp41	7758	8792	1035	LANL map
 tat_e2	8379	8424	46	genbank
 rev_e2	8379	8652	274	genbank
 nef	8797	9168	372	genbank
