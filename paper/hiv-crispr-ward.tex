@@ -20,10 +20,14 @@
 \title{An In-Silico Pipeline for CRISPR--Cas9 Guide Design Against the \HH{}
   Proviral Genome: Cross-Subtype Conservation, Genome-Wide Human Off-Target
   Exclusion, and Transcriptome Similarity Screening}
-\author{Walker, ND\thanks{Independent research; Oregon, USA. Computational
-  work performed on a NVIDIA Jetson Orin Nano (ARM64, 8\,GB). All code, data,
-  results tables, and the citation ledger are in the accompanying repository
-  (\texttt{crispr-hiv-ward}).}}
+\author{Walker Kirkpatrick, ND\thanks{Independent researcher; Oregon, USA.
+  Correspondence: \url{walker@drwjkirkpatrick.com}. Directed the research,
+  approved the design criteria, and reviewed the manuscript.}
+  \and Hermes Agent\thanks{Autonomous research agent built by Nous Research
+  (\url{https://nousresearch.com}). Implemented the computational pipeline
+  and C scanner, performed the literature retrieval and citation
+  verification, ran all analyses, and drafted the manuscript, under Dr.\
+  Kirkpatrick's direction and approval.}}
 \date{October 22, 2026}
 
 \begin{document}
@@ -352,6 +356,18 @@ packed-genome tooling, the citation ledger with verbatim source quotes
 genome (Ensembl release 113\src{56}) and GENCODE v44\src{57} are fetched by
 script; strain sets are fetched from NCBI E-utilities with reproducible
 queries.
+
+\section*{Acknowledgments}
+Computational work was performed on a NVIDIA Jetson Orin Nano (ARM64,
+8\,GB) running fully scripted, reproducible tooling; all code, data,
+results tables, and the citation ledger are in the accompanying repository
+(\texttt{crispr-hiv-ward}). Hermes Agent is an autonomous research agent
+built by \textbf{Nous Research}; it carried out the pipeline engineering,
+source retrieval and verification, analyses, and manuscript drafting under
+Dr.\ Kirkpatrick's direction, with all findings and design criteria subject
+to his review and approval. We thank the maintainers of NCBI, Ensembl,
+GENCODE, and the Los Alamos HIV Database for open access to the sequence
+data and annotations that made this work possible.
 
 \input{sources_block}
 
