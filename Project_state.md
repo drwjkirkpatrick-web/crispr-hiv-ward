@@ -1,70 +1,74 @@
 # Project State: crispr-hiv-ward
 
 > **Last updated:** 2026-10-22
-> **Current phase:** build
+> **Current phase:** polish (v1.0 research complete)
 > **Overall health:** green
 
 ---
 
 ## 1. Goal (1–2 sentences)
-In-silico design of CRISPR guide RNAs that cleave and inactivate the integrated
-HIV-1 proviral genome, identifying the target region that is (a) conserved across
-HIV-1 strains, (b) least similar to human genes, and (c) grounded in published
-evidence. Computational/literature work only; no wet-lab, no GitHub push yet.
+In-silico design of CRISPR guide RNAs that cleave and inactivate the
+integrated HIV-1 proviral genome, identifying the target region that is (a)
+conserved across HIV-1 strains, (b) least similar to human genes, and (c)
+grounded in published evidence. Computational/literature work only; no
+wet-lab; NOT pushed to GitHub yet.
 
 ## 2. Current Status
 ### Done
-- [x] Web research (first pass): Khalili excision strategy, EBT-101 = AAV9-SaCas9-GagD-LTR1,
-      escape (Wang 2016), off-target data, Cas13 work
-- [x] Scaffold + git init; HXB2 (K03455) FASTA + GenBank fetched; HXB2 = 9719 bp
-- [x] HXB2 feature table parsed (LTRs 1–634 / 9086–9719, R 454–551, gag 790–2292,
-      pol 2358–5096, vif 5041–5619, vpr 5559–5795, tat 5831–8424, rev 5970–8653,
-      env 6225–8795, nef 8797–9168)
-- [x] GRCh38 + GENCODE download started (background, proc_e1277f65600b)
+- [x] Full pipeline: strain fetch (24 diverse genomes), conservation (25
+      strains), guide enumeration (1,365 sites -> 668 filtered -> 190 scanned)
+- [x] C scanner `crispr_scan` (pack/scan/kmap), 13/13 tests, ~5 min GRCh38
+- [x] On-target validation 190/190 exact at expected HXB2 coordinates
+- [x] Human off-target scan: 0 exact off-targets; tiers A+/A/B = 63/102/25
+- [x] k-mer similarity maps: 0 shared 30-mers, 261 20-mer positions, 9
+      transcriptome positions (NOTCH3 trap found in psi leader guides)
+- [x] Region ranking (LANL-verified coordinates) + dual/triple strategy
+- [x] Paper `paper/hiv-crispr-ward.pdf` (9 pp, 0 overfull boxes, 12/12
+      rendered-PDF claim checks, 21 cited sources / 25 rendered quotes)
+- [x] README.md; 39/39 tests green; all work committed locally (7 commits)
 
 ### In Progress
-- [ ] Subagent A: docs/research_notes.md (literature, verified citations)
-- [ ] Subagent B: src/crispr_scan.c + tests (off-target scanner, k-mer map)
-- [ ] GRCh38 + transcriptome download (background)
-- [ ] Python pipeline (fetch/conservation/guides/analyze) — being written
+- [ ] (awaiting user) GitHub push — deliberately deferred per user instruction
 
 ### Not Started
-- [ ] Strain set fetch + conservation analysis
-- [ ] Guide enumeration + off-target scans vs human genome
-- [ ] Region ranking + design report + README
-- [ ] Full test suite green + local commits (NO push)
+- [ ] Benchmark published guides (GagD/LTR1) through the tier system
+- [ ] Cas13 crRNA design reusing the same machinery
 
 ## 3. Architecture & Key Decisions
 | Decision | Rationale | Date |
 |---|---|---|
-| SpCas9 (NGG) + SaCas9 (NNGRRT) design; Cas13 covered in report only | SaCas9 fits AAV (EBT-101 precedent); SpCas9 is the literature workhorse | 2026-10-22 |
-| Off-target scan: custom C tool, ≤4 mismatches, NGG+NAG (Sp) / NNGRRT+NNGRRV (Sa) | Cas-OFFiner-equivalent exhaustive scan, self-contained on Jetson | 2026-10-22 |
-| Human similarity: exact 20-mer k-map vs GRCh38 + GENCODE pc transcripts | quantitative "least similar to human genes" evidence | 2026-10-22 |
-| Conservation: star-align ~24 diverse subtype genomes to HXB2 | guide must work across group M; escape resistance | 2026-10-22 |
-| GRCh38 Ensembl primary assembly (no alts), NCBI/UCSC fallback | standard for off-target analysis | 2026-10-22 |
+| SpCas9 (NGG) + SaCas9 (NNGRRT) design; Cas13 covered in paper only | SaCas9 fits AAV (EBT-101 precedent); SpCas9 is the literature workhorse | 2026-10-22 |
+| Custom C scanner, exhaustive <=4 mm, both strands | Cas-OFFinder-equivalent, self-contained on Jetson | 2026-10-22 |
+| Tiered safety (A+/A/B), not "zero <=3 mm" | ~30 by-chance <=3 mm sites per 20-mer genome-wide; <=2 mm is the risk band | 2026-10-22 |
+| Transcriptome screen of mm<=2 windows | caught psi-leader guides exactly matching human NOTCH3 | 2026-10-22 |
+| Regions from GenBank K03455 + LANL HXB2 map | both verified sources; psi literature-only | 2026-10-22 |
 
 ## 4. Blockers & Risks
-- **Risk:** GENCODE/Ensembl URLs stale → fallback chain in download script.
-- **Risk:** scanner conventions (window/PAM strand rules) → unit tests + on-target
-  validation vs HXB2 itself before trusting human-genome results.
-- **Risk:** strain set may skew subtype B → label and report diversity honestly.
+- **Risk:** in-silico tiers are necessary-not-sufficient; bulge off-targets
+  not scanned -> CHOPCHOP/CRISPOR re-score before any wet-lab use.
+- **Risk:** strain set subtype labels sparse (2/24 records) -> geographic
+  diversity is the honesty metric.
 
 ## 5. Next Step (only ONE)
-> **Next:** Write Python pipeline (fetch_hiv, regions, conservation, guides, analyze) + tests, then run strain fetch and conservation as soon as it lands.
+> **Next:** On user request: create GitHub repo and push (currently deferred).
 
 ## 6. Environment & Tooling Notes
-- Use `/usr/bin/python3` (has biopython 1.88 + numpy 2.2.6); the venv `python3`
+- Use `/usr/bin/python3` (biopython 1.88 + numpy 2.2.6); the venv `python3`
   (hermes) has no pip/biopython.
-- gcc 11.4 ARM64, 6 cores, ~4 GB RAM available; keep scans < 2 GB RAM.
-- Subagents own: A → docs/research_notes.md + docs/citations/; B → src/crispr_scan.c,
-  src/Makefile, tests/test_scanner.py. Parent owns all other files.
-- No GitHub push (user instruction).
+- LaTeX: pdflatex + lmodern + microtype[expansion=false] (bitmap-font
+  expansion crashes otherwise); require `grep Overfull *.log` = 0.
+- Citation ledger: docs/citations/ledger.json (58 sources); render Sources
+  blocks only via src/make_sources_block.py — never hand-typed.
+- NCBI E-utilities: pace 0.5 s/request, back off on HTTP 429.
 
 ## 7. Recent Session Log
-- 2026-10-22: Project created; initial research; scaffold; downloads + 2 subagents
-  (literature, C scanner) dispatched in parallel.
+- 2026-10-22: Full research cycle completed step-by-step: pipeline, scanner,
+  scans, analysis, LANL region verification, 9-page cited paper, README;
+  7 local commits; GitHub push deferred by user.
+- 2026-10-22: Two subagents (literature, C scanner) died on provider 429
+  limits; parent absorbed both workstreams (scanner was ~90% complete).
 
 ## 8. References
 - Plan: `.hermes/plans/2026-10-22_crispr-hiv-ward.md`
-- Research notes: `docs/research_notes.md` (subagent A)
-- Design report: `docs/design_report.md` (final deliverable)
+- Paper: `paper/hiv-crispr-ward.pdf` (+ .tex, generated sources block)
+- Citation ledger: `docs/citations/ledger.json`
