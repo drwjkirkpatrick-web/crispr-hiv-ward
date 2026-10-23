@@ -13,6 +13,44 @@ most conserved across viral strains and least similar to human genes.
 
 **Status: research complete, v1.0.1.**
 
+## Note for researchers: p24 (capsid) — the go-to internal target going forward
+
+Across every metric in this study, the **p24 capsid region of gag (HXB2
+1,186–1,878) is the strongest internal target for future guide development**:
+
+- **Largest safe pool of any internal region:** 12 of its 34 guides are
+  tier A+ (no human-genomic off-target with ≤2 mismatches *and* no
+  transcriptome hit with ≤1 mismatch) — see `results/guide_scores.tsv`.
+- **Least human-like coding region:** only 7 exact 20-mer positions shared
+  with the entire human genome, and **zero** shared with human
+  protein-coding transcripts — compare RT (53 shared) and integrase (40),
+  which carry the endogenous-retrovirus footprint.
+- **Independently corroborated conservation:** the LANL HXB2 entropy map
+  scores p24 at 0.2073 mean Shannon entropy, among the lowest of all coding
+  regions (integrase 0.1598, cPPT 0.0112) — i.e., strongly functionally
+  constrained.
+
+Top tier-A+ p24 guides (protospacer + PAM, HXB2 coordinates, SpCas9/SaCas9):
+
+| Guide | HXB2 pos | Protospacer + PAM | Cons. (25 strains) |
+|---|---|---|---|
+| SA_1397+ | 1,397 | `AGACCATCAATGAGGAAGCT`–`GCA` | 0.36 |
+| SA_1402+ | 1,402 | `ATCAATGAGGAAGCTGCAGA`–`ATG` | 0.32 |
+| SP_1500+ | 1,500 | `AGGAACTACTAGTACCCTTC`–`AGG` | 0.28 |
+| SP_1456− | 1,456 | `ATTGCACCAGGCCAGATGAG`–`AGA` | 0.28 |
+
+**Recommended going forward:** pair one 5′LTR-U5 guide (dual-cut excision
+geometry) with **two or more p24 guides** rather than a single internal
+guide — this maximizes simultaneous-escape requirements at the most
+functionally constrained, least human-similar internal region. Before any
+wet-lab use: (1) re-score finalists with bulge-aware off-target tools
+(CRISPOR/CHOPCHOP/Cas-OFFinder with DNA/RNA bulges), (2) confirm guide
+activity across a patient-derived panel spanning subtype B plus global
+subtypes (our conservation scoring already covers 25 genomes from 10+
+countries), and (3) deep-sequence the capsid target region to quantify
+pre-existing variation. Full per-guide data: `results/guide_scores.tsv`,
+`results/region_ranking.tsv`, and the paper (§ Results).
+
 ## Headline findings
 
 - **Zero exact-match off-targets.** Across all 190 screened guides, not one
